@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  function passvalues(){
+    var aname = document.getElementById("fname").value
+    localStorage.setItem("a_name",aname)
+    var date = document.getElementById("date").value
+    localStorage.setItem("duedate",date)
+    var type = document.getElementById("type").value
+    localStorage.setItem("type",type)
+    var desc = document.getElementById("desc").value
+    localStorage.setItem("desc",desc)
+    return false
+  }
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >DLEARNTeacher</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <section id="home">
+      <svg viewBox="0 0 960 300">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">TEACHER </text>
+          <text text-anchor="middle" x="52%" y="80%">TEACHER </text>
+          
+        </symbol>
+      
+        <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+  </section>
+  <section id="assign">
+    <div class="container reveal">
+      <h2>Assign:</h2>
+      <div class="text-container">
+        <div class="text-box large">
+            <div class="container1">
+                <form action="/student.html">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="fname">Assignment Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="fname" name="aname" placeholder="Assignment name..">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="lname">Due Date</label>
+                  </div>
+                  <div class="col-75" style="margin-top:10px">
+                    <input type="date" id="date" name="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="type">Assigment Type</label>
+                  </div>
+                  <div class="col-75">
+                    <select id="type" name="type">
+                      <option value="Homework">Homework</option>
+                      <option value="Classwork">Classwork</option>
+                      <option value="Project">Project</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="desc">Assignment Description</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="desc" name="desc" placeholder="Describe....." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <input type="submit" value="Submit" onclick="passvalues()">
+                </div>
+                </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="container reveal">
+      <h2>Teacher Resources</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <a href="https://www.khanacademy.org/" target="_BLANK"><img src="ka.png"/></a>
+          <a href="https://newsela.com/" target="_BLANK"><img src="na.png" /></a>
+          <a href="https://edpuzzle.com/" target="_BLANK"><img src="download.png" /></a>
+          <a href="https://quizizz.com/" target="_BLANK"><img src="qu.png" /></a>
+          <a href="https://kahoot.com/" target="_BLANK"><img src="kh.png" /></a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section id="how">
+    <div class="container reveal">
+      <h2>How it Works</h2>
+      <img src="mark.png" style="margin-left:32%"/>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Write</h3>
+          <p>
+            Type in the assignment name, due date, type, and details.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Submit</h3>
+          <p>
+            Save the assignment by hitting the submit button.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Save the Link</h3>
+          <p>
+            You will be forwarded to the student page. Save the link and send it to the student. All assignments 
+            will be updated in real time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container reveal">
+      <h2>About DLEARN</h2>
+      <div class="text-container">
+        <div class="text-box large">
+          <p class="infotex">
+            DLEARN is...
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#assign">Assign</a></li>
+      <li><a href="student.html">Student Portal</a></li>
+      <li><a href="#resources">Teacher Resources</a></li>
+      <li><a href="#how">How it Works</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+  <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function Updated(){
+      document.getElementById("a_name").innerHTML=localStorage.getItem("a_name")
+      document.getElementById("d_date").innerHTML=localStorage.getItem("duedate")
+      document.getElementById("a_type").innerHTML=localStorage.getItem("type")
+      document.getElementById("descript").innerHTML=localStorage.getItem("desc")
+    }
+  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLEARNStudent</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body onload="Updated()">
+    <section>
+        <svg viewbox="0 0 100 20">
+            <defs>
+              <linearGradient id="gradient">
+                <stop color="#000"/>
+              </linearGradient>
+              <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+                  <animateTransform
+                      attributeName="transform"
+                      begin="0s"
+                      dur="1.5s"
+                      type="translate"
+                      from="0,0"
+                      to="40,0"
+                      repeatCount="indefinite" />
+                </path>
+              </pattern>
+            </defs>
+            <text text-anchor="middle" x="50" y="15" font-size="17" fill="white" fill-opacity="0.1">STUDENT</text>
+            <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="1">STUDENT</text>
+          </svg>
+        </section>
+  <section>
+    <div class="container reveal">
+      <h2>Assignment:</h2>
+      <div class="text-container">
+        <div class="text-box large">
+            <div class="container1">
+              <h3>Assignment Name:</h3>
+              <p class="assignmentdetails"><span id="a_name"></span></p>
+            </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="text-box large">
+            <div class="container1">
+              <h3>Due Date:</h3>
+              <p class="assignmentdetails"><span id="d_date"></span></p>
+            </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="text-box large">
+            <div class="container1">
+              <h3>Assignment Type:</h3>
+              <p class="assignmentdetails"><span id="a_type"></span></p>
+            </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="text-box large">
+            <div class="container1">
+              <h3>Description:</h3>
+              <p class="assignmentdetails"><span id="descript"></span></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="test.js"></script>
+</body>
+</html>
